@@ -1,4 +1,5 @@
 # SKEMA HTML
+[Bacaan Komprehensif](https://web.dev/learn/html/document-structure)
 
 Berikut adalah skema dasar dari sebuah halaman HTML
 
@@ -32,14 +33,56 @@ Tag ini berfungsi untuk memberi kapasitas _responsiveness_ kepada halaman HTML a
 
 Untuk pelajaran dasar HTML, kita tidak terlalu memperlukan informasi viewport. Tag-tag lainnya pun biasanya akan di-_generate_ secara otomatis nantinya saat kita mulai belajar react jika kita menggunakan tools seperti [Vite](https://vite.dev/)
 
+Selain itu, tag yang biasanya akan kita tambahkan di \<head> adalah \<link>, yang berguna untuk me-_load_ _file-file_ CSS
+```html
+<link rel="stylesheet" href="style.css" />
+```
+
 Sejauh ini, skema HTML dasar kita adalah sebagai berikut
 ```html
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Skema Dasar Halaman HTML</title>
+    <title>Dasar-dasar HTML</title>
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- Contoh comment HTML --> 
   </head>
   <body>. . .</body>
+</html>
+```
+
+## \<body>
+Seluruh konten dari halaman web yang kita buat akan ada di dalam tag ini. Isi dari tag ini dapat berupa text mentah maupun elemen HTML lainnya. Selain itu, biasanya \<script> akan diletakkan pada akhir \<body> agar _file-file_ Javascript di-_load_ setelah seluruh elemen di halaman ter-_render_
+
+### \<script>
+Tag untuk me-_load_ kode ataupun _file_ Javascript, untuk memberikan interaktivitas pada elemen-elemen HTML di halaman web
+```html
+<script type="text/javascript">
+  console.log("Hello, World!")
+</script>
+<script type="text/javascript" src="main.js" />
+```
+
+Dengan menambahkan konten \<body> dan \<script>, _file_ HTML dasar kita menjadi sebagai berikut
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dasar-dasar HTML</title>
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- Contoh comment HTML --> 
+  </head>
+  <body>
+    Hello, World!
+
+    <script type="text/javascript">
+      console.log("Hello, World!")
+    </script>
+    <!-- <script type="text/javascript" src="main.js" /> -->
+  </body>
 </html>
 ```
